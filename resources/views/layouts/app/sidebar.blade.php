@@ -16,9 +16,22 @@
                         {{ __('Dashboard') }}
                     </flux:sidebar.item>
 
-                    <flux:sidebar.item icon="folder" :href="route('categories.index')" :current="request()->routeIs('categories.index')" wire:navigate>
+                    <flux:sidebar.item icon="folder" :href="route('category.index')" :current="request()->routeIs('category.index')" wire:navigate>
                         {{ __('Categories') }}
                     </flux:sidebar.item>
+
+                    <flux:sidebar.item icon="wallet" :href="route('budget.index')" :current="request()->routeIs('budget.index')" wire:navigate>
+                        {{ __('Keuangan') }}
+                    </flux:sidebar.item>
+
+                    <flux:sidebar.item icon="credit-card" :href="route('transaction.index')" :current="request()->routeIs('transaction.index')" wire:navigate>
+                        {{ __('Transaksi') }}
+                    </flux:sidebar.item>
+
+                    <flux:sidebar.item icon="trophy" :href="route('saving-goal.index')" :current="request()->routeIs('saving-goal.index')" wire:navigate>
+                        {{ __('Tabungan') }}
+                    </flux:sidebar.item>
+
                 </flux:sidebar.group>
             </flux:sidebar.nav>
 
